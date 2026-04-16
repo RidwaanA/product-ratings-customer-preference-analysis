@@ -32,32 +32,29 @@ The challenge:
 - Conducted correlation analysis across all numerical variables
 
 ## Key Code Highlights
-
 ```python
-# Group-wise mean imputation for missing shipping costs
+// Group-wise mean imputation for missing shipping costs
 df['shipping_cost'] = df['shipping_cost'].fillna(
     df.groupby(['product_category', 'product_subcategory', 'brand'])['shipping_cost'].transform('mean')
 )
 ```
-
 ```python
-# Group-wise median imputation for assembly cost (outliers present)
+// Group-wise median imputation for assembly cost (outliers present)
 df['assembly_cost'] = df['assembly_cost'].fillna(
     df.groupby(['product_category', 'product_subcategory', 'brand'])['assembly_cost'].transform('median')
 )
 ```
-
 ```python
-# Assembly service impact on ratings
+// Assembly service impact on ratings
 df.groupby('assembly_service_requested')['customer_rating'].mean()
 ```
-
 ```python
-# Average customer rating by product category
+// Average customer rating by product category
 sns.lineplot(data=df, x='product_category', y='customer_rating', ci=None)
 plt.xticks(rotation=90)
 plt.show()
 ```
+
 ## Visualization / Dashboard
 - Distribution plots and boxplots for all numerical features (product price, shipping cost, assembly cost, total amount, delivery window days, customer rating)
 - Count plots for all categorical features (product category, subcategory, brand, delivery status, payment method, assembly service)
