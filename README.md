@@ -62,7 +62,6 @@ plt.show()
 <img width="555" height="300" alt="Bar chart_Assembly requested count " src="https://github.com/user-attachments/assets/a845c673-4083-4d3b-a0ce-8164a95100a4" />
 
 - 📌 Line and box plots for total amount, delivery window days, and customer rating across categories, subcategories, and brands
-![Uploading Bar chart_Assembly requested count .png…]()
 <img width="405" height="369" alt="Line chart_Brand customer rating" src="https://github.com/user-attachments/assets/2e1b2655-a250-431f-8886-d2dd5f522407" />
 
 - 📌 Correlation heatmap and pairplot across numerical variables
